@@ -1,6 +1,6 @@
 {
   "name": "com-huawei-cordovahmsgmscheckplugin",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Account Check Kit 4.0",
   "repository": "https://github.com/horaas/CordovaHMSGMSCheckPlugin.git",
   "bugs": "https://github.com/horaas/CordovaHMSGMSCheckPlugin/issues",
