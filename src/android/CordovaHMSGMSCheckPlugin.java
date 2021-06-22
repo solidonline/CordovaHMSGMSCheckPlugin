@@ -42,10 +42,16 @@ public class CordovaHMSGMSCheckPlugin extends CordovaPlugin {
     private void isHmsAvailable() {
         boolean isAvailable = false;
         Context context = cordova.getContext();
-        if (null != cordova.getContext()) {
-            int result = HuaweiApiAvailability.getInstance().isHuaweiMobileServicesAvailable(context);
-            isAvailable = (com.huawei.hms.api.ConnectionResult.SUCCESS == result);
+
+        try {
+          if (null != cordova.getContext()) {
+              int result = HuaweiApiAvailability.getInstance().isHuaweiMobileServicesAvailable(context);
+              isAvailable = (com.huawei.hms.api.ConnectionResult.SUCCESS == result);
+          }
         }
+        catch(Exception e) {}
+
+
         Log.i("Cordova", "isHmsAvailable: " + isAvailable);
         String msg = "false";
         if(isAvailable){
